@@ -37,21 +37,24 @@ def scrape_necessary_content(content:str):
     """
     soup=BeautifulSoup(content,'html.parser')
     author_name = soup.find('div', id='gsc_prf_in')
-    author_work= soup.find('div', class_='gsc_prf_il')
-    verified_email=soup.find('div', id='gsc_prf_ivh', class_='gsc_prf_il')
-    gsc_prf_inta_links = soup.find_all('a', class_='gsc_prf_inta gs_ibl')
-    gsc_a_at_links = soup.find_all('a', class_='gsc_a_at')
-    gsc_a_ac_links = soup.find_all('a', class_='gsc_a_ac gs_ibl')
-    gsc_a_hc_spans = soup.find_all('span', class_='gsc_a_h gsc_a_hc gs_ibl')
-    
+    work_place= soup.find('div', class_='gsc_prf_il')
+    verified_email_at=soup.find('div', id='gsc_prf_ivh', class_='gsc_prf_il')
+    interests = soup.find_all('a', class_='gsc_prf_inta gs_ibl')
+    research_title = soup.find_all('a', class_='gsc_a_at')
+    citations_corresponding = soup.find_all('a', class_='gsc_a_ac gs_ibl')
+    years_corresponding = soup.find_all('span', class_='gsc_a_h gsc_a_hc gs_ibl')
+    authorAchievements= soup.find_all('td', class_='gsc_rsb_std')
     response = {
             "Name": author_name.get_text(strip=True) if author_name else None,
-            "Works": author_work.get_text(strip=True) if author_work else None,
-            "Verified Email":verified_email.get_text(strip=True) if verified_email else None,
-            "gsc_prf_inta_links": [link.get_text(strip=True) for link in gsc_prf_inta_links] if gsc_prf_inta_links else [],
-            "gsc_a_at_links": [link.get_text(strip=True) for link in gsc_a_at_links] if gsc_a_at_links else [],
-            "gsc_a_ac_links": [link.get_text(strip=True) for link in gsc_a_ac_links] if gsc_a_ac_links else [],
-            "gsc_a_hc_spans": [span.get_text(strip=True) for span in gsc_a_hc_spans] if gsc_a_hc_spans else []
+            "WorkPlace": work_place.get_text(strip=True) if work_place else None,
+            "Verified Email":verified_email_at.get_text(strip=True) if verified_email_at else None,
+            "Interests": [link.get_text(strip=True) for link in interests] if interests else [],
+            "Research Title": [link.get_text(strip=True) for link in research_title] if research_title else [],
+            "Corresponding Citations": [link.get_text(strip=True) for link in citations_corresponding] if citations_corresponding else [],
+            "Corresponding Years": [span.get_text(strip=True) for span in years_corresponding] if years_corresponding else [],
+            # sc1 not required isme bas headings hai
+            "Author Achievements": [td.get_text(strip=True) for td in authorAchievements] if authorAchievements else []  # Extract text from the gsc_rsb_std elements
+            
         }
         
     return response
