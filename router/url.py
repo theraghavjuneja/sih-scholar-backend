@@ -2,10 +2,11 @@ from fastapi import APIRouter,status,HTTPException
 from fastapi.responses import RedirectResponse
 import logging
 import colorlog
+from bs4 import BeautifulSoup
 logger = colorlog.getLogger()
 logger.setLevel(logging.DEBUG)
 from models.classmodels import WriterInfo
-from helperfunctions.htmlloader import load_html_content
+from helperfunctions.htmlloader import load_html_content,scrape_necessary_content
 formatter = colorlog.ColoredFormatter(
     '%(log_color)s%(levelname)s: %(message)s',
     log_colors={
@@ -28,4 +29,5 @@ async def root():
 async def return_writer_info(writer_info:WriterInfo):
     urls=f"https://scholar.google.com/citations?hl=en&user={writer_info.author_id}"
     documents=await load_html_content(urls)
-    return documents
+    # further processing this document for scraping purposes
+    return scrape_necessary_content(documents)
