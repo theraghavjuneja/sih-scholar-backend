@@ -27,7 +27,7 @@ async def root():
     return RedirectResponse(url="/docs")
 @router.post("/returnwriterinfo")
 async def return_writer_info(writer_info:WriterInfo):
-    urls=f"https://scholar.google.com/citations?hl=en&user={writer_info.author_id}"
+    urls=f"https://scholar.google.com/citations?hl=en&user={writer_info.author_id}&pagesize=70"
     documents=await load_html_content(urls)
     # further processing this document for scraping purposes
-    return scrape_necessary_content(documents)
+    return scrape_necessary_content(str(documents))

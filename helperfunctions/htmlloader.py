@@ -30,12 +30,28 @@ async def load_html_content(url:str):
         logging.error(str(e))
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 def scrape_necessary_content(content:str):
-    soup=BeautifulSoup(content.html,'html.parser')
-    gsc_prf_in_content = soup.find('div', id='gsc_prf_in')
-    gsc_prf_il_content = soup.find('div', class_='gsc_prf_il')
+    # content is already html(in almost all I saw) so I am not using content.html directly parsing the content
+    """
+    What if this content(to return) becomes much big-> In that case lazy loading etc.?? or entire
+    
+    """
+    soup=BeautifulSoup(content,'html.parser')
+    author_name = soup.find('div', id='gsc_prf_in')
+    author_work= soup.find('div', class_='gsc_prf_il')
+    verified_email=soup.find('div', id='gsc_prf_ivh', class_='gsc_prf_il')
+    gsc_prf_inta_links = soup.find_all('a', class_='gsc_prf_inta gs_ibl')
+    gsc_a_at_links = soup.find_all('a', class_='gsc_a_at')
+    gsc_a_ac_links = soup.find_all('a', class_='gsc_a_ac gs_ibl')
+    gsc_a_hc_spans = soup.find_all('span', class_='gsc_a_h gsc_a_hc gs_ibl')
+    
     response = {
-            "gsc_prf_in": gsc_prf_in_content.get_text(strip=True) if gsc_prf_in_content else None,
-            "gsc_prf_il": gsc_prf_il_content.get_text(strip=True) if gsc_prf_il_content else None
+            "Name": author_name.get_text(strip=True) if author_name else None,
+            "Works": author_work.get_text(strip=True) if author_work else None,
+            "Verified Email":verified_email.get_text(strip=True) if verified_email else None,
+            "gsc_prf_inta_links": [link.get_text(strip=True) for link in gsc_prf_inta_links] if gsc_prf_inta_links else [],
+            "gsc_a_at_links": [link.get_text(strip=True) for link in gsc_a_at_links] if gsc_a_at_links else [],
+            "gsc_a_ac_links": [link.get_text(strip=True) for link in gsc_a_ac_links] if gsc_a_ac_links else [],
+            "gsc_a_hc_spans": [span.get_text(strip=True) for span in gsc_a_hc_spans] if gsc_a_hc_spans else []
         }
         
     return response
