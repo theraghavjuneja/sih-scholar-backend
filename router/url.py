@@ -1,4 +1,5 @@
 from fastapi import APIRouter,status,HTTPException
+from fastapi.responses import RedirectResponse
 import logging
 import colorlog
 logger = colorlog.getLogger()
@@ -20,9 +21,11 @@ console_handler.setFormatter(formatter)
 
 logger.addHandler(console_handler)
 router=APIRouter()
-
+@router.get("/", include_in_schema=False)  
+async def root():
+    return RedirectResponse(url="/docs")
 @router.post("/returnwriterinfo")
 async def return_writer_info(writer_info:WriterInfo):
-    urls=[f"https://scholar.google.com/citations?hl=en&user={writer_info.author_id}"]
+    urls=f"https://scholar.google.com/citations?hl=en&user={writer_info.author_id}"
     documents=await load_html_content(urls)
     return documents

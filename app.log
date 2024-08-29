@@ -1,0 +1,79 @@
+2024-08-29 06:55:04,904 - INFO - Application started successfully
+2024-08-29 06:55:09,418 - INFO - Application ended succesfully
+2024-08-29 06:55:11,514 - INFO - Application started successfully
+2024-08-29 06:55:15,841 - INFO - Application ended succesfully
+2024-08-29 06:55:17,861 - INFO - Application started successfully
+2024-08-29 06:55:17,866 - INFO - Application ended succesfully
+2024-08-29 06:55:19,847 - INFO - Application started successfully
+2024-08-29 06:55:25,491 - INFO - Application ended succesfully
+2024-08-29 06:55:47,078 - INFO - Application started successfully
+2024-08-29 06:55:54,085 - INFO - Application ended succesfully
+2024-08-29 06:55:56,119 - INFO - Application started successfully
+2024-08-29 06:56:02,545 - INFO - Application ended succesfully
+2024-08-29 06:56:04,751 - INFO - Application started successfully
+2024-08-29 06:56:16,818 - DEBUG - Using selector: SelectSelector
+2024-08-29 06:56:19,426 - ERROR - object list can't be used in 'await' expression
+2024-08-29 06:56:41,472 - INFO - Application ended succesfully
+2024-08-29 06:56:46,131 - INFO - Application started successfully
+2024-08-29 06:56:52,302 - DEBUG - Using selector: SelectSelector
+2024-08-29 06:56:54,616 - ERROR - object list can't be used in 'await' expression
+2024-08-29 06:57:17,089 - INFO - Application ended succesfully
+2024-08-29 06:57:19,180 - INFO - Application started successfully
+2024-08-29 06:57:24,696 - INFO - Application ended succesfully
+2024-08-29 06:57:26,867 - INFO - Application started successfully
+2024-08-29 06:57:29,887 - DEBUG - Using selector: SelectSelector
+2024-08-29 06:57:32,208 - ERROR - object list can't be used in 'await' expression
+2024-08-29 06:57:50,924 - INFO - Application ended succesfully
+2024-08-29 06:57:53,045 - INFO - Application started successfully
+2024-08-29 06:57:55,033 - INFO - Application ended succesfully
+2024-08-29 06:57:57,046 - INFO - Application started successfully
+2024-08-29 06:58:00,922 - INFO - Application ended succesfully
+2024-08-29 06:58:02,976 - INFO - Application started successfully
+2024-08-29 06:58:05,649 - DEBUG - Using selector: SelectSelector
+2024-08-29 06:58:08,078 - ERROR - object list can't be used in 'await' expression
+2024-08-29 06:58:28,037 - INFO - Application ended succesfully
+2024-08-29 06:58:30,071 - INFO - Application started successfully
+2024-08-29 06:58:32,071 - INFO - Application ended succesfully
+2024-08-29 06:58:42,005 - INFO - Application started successfully
+2024-08-29 06:58:42,649 - INFO - Application ended succesfully
+2024-08-29 06:58:44,542 - INFO - Application started successfully
+2024-08-29 06:58:45,071 - INFO - Application ended succesfully
+2024-08-29 06:58:47,055 - INFO - Application started successfully
+2024-08-29 06:58:52,962 - INFO - Application ended succesfully
+2024-08-29 06:58:54,984 - INFO - Application started successfully
+2024-08-29 06:58:54,984 - INFO - Application ended succesfully
+2024-08-29 06:58:57,001 - INFO - Application started successfully
+2024-08-29 06:59:58,699 - INFO - Application ended succesfully
+2024-08-29 07:00:00,768 - INFO - Application started successfully
+2024-08-29 07:00:04,340 - INFO - Application ended succesfully
+2024-08-29 07:00:06,459 - INFO - Application started successfully
+2024-08-29 07:00:11,496 - INFO - Application ended succesfully
+2024-08-29 07:00:13,381 - INFO - Application started successfully
+2024-08-29 07:00:18,492 - INFO - ME
+2024-08-29 07:00:18,492 - INFO - OK
+2024-08-29 07:00:18,492 - INFO - ONE
+2024-08-29 07:00:18,492 - INFO - TWO
+2024-08-29 07:00:18,492 - DEBUG - Using selector: SelectSelector
+2024-08-29 07:00:20,825 - ERROR - object list can't be used in 'await' expression
+2024-08-29 07:00:42,032 - INFO - Application ended succesfully
+2024-08-29 07:00:44,069 - INFO - Application started successfully
+2024-08-29 07:00:45,343 - INFO - ME
+2024-08-29 07:00:45,343 - INFO - OK
+2024-08-29 07:00:45,344 - INFO - ONE
+2024-08-29 07:00:45,344 - INFO - TWO
+2024-08-29 07:00:45,344 - DEBUG - Using selector: SelectSelector
+2024-08-29 07:00:47,672 - INFO - THREE
+2024-08-29 07:00:47,672 - INFO - FINE
+2024-08-29 07:01:20,425 - INFO - Application ended succesfully
+2024-08-29 07:01:22,504 - INFO - Application started successfully
+2024-08-29 07:01:24,312 - INFO - Application ended succesfully
+2024-08-29 07:01:26,242 - INFO - Application started successfully
+2024-08-29 07:01:30,020 - INFO - Application ended succesfully
+2024-08-29 07:01:31,948 - INFO - Application started successfully
+2024-08-29 07:01:45,084 - INFO - Application ended succesfully
+2024-08-29 07:01:47,076 - INFO - Application started successfully
+2024-08-29 07:04:22,788 - INFO - Application ended succesfully
+2024-08-29 07:04:24,891 - INFO - Application started successfully
+2024-08-29 07:04:25,532 - INFO - Application ended succesfully
+2024-08-29 07:04:27,565 - INFO - Application started successfully
+2024-08-29 07:04:27,873 - INFO - Application ended succesfully
